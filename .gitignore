@@ -1,0 +1,5 @@
+.vercel/
+model/banglore_home_prices_model.pickle
+model/bengaluru_house_prices.csv
+model/columns.json
+server/__pycache__

@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* heading */
+.main-heading {
+    text-align: center;
+    color: #48cae4;  /* Changed to theme's accent color */
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #16213e;  /* Matching form background */
+    border-bottom: 4px solid #48cae4;  /* Using theme's accent color */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(72, 202, 228, 0.2);  /* Soft glow effect */
+    border-radius: 10px;
+}
+
+body {
+    background-color: #1a1a2e;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: #e6e6e6;
+}
+
+.img {
+    background: url('/api/placeholder/800/300') center/cover;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.form {
+    background: #16213e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    border: 1px solid #2a4174;
+}
+
+h2 {
+    color: #8ecae6;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.area {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a1a2e;
+    border: 1px solid #2a4174;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.area:focus {
+    outline: none;
+    border-color: #48cae4;
+}
+
+.switch-field {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.switch-field input {
+    display: none;
+}
+
+.switch-field label {
+    background-color: #1a1a2e;
+    color: #8ecae6;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #2a4174;
+}
+
+.switch-field input:checked + label {
+    background-color: #48cae4;
+    color: #16213e;
+    border-color: #48cae4;
+}
+
+.switch-field label:hover {
+    background-color: #2a4174;
+}
+
+.location {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a1a2e;
+    border: 1px solid #2a4174;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.location:focus {
+    outline: none;
+    border-color: #48cae4;
+}
+
+.location option {
+    background-color: #16213e;
+    color: #fff;
+}
+
+.submit {
+    width: 100%;
+    padding: 15px;
+    background-color: #48cae4;
+    color: #16213e;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.submit:hover {
+    background-color: #90e0ef;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(72, 202, 228, 0.3);
+}
+
+.result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #1a1a2e;
+    border: 1px solid #2a4174;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.result h2 {
+    color: #48cae4;
+    margin: 0;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2a4174;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #48cae4;
+}
+
+@media (max-width: 600px) {
+    .form {
+        padding: 20px;
+    }
+
+    .switch-field {
+        flex-wrap: wrap;
+    }
+
+    .switch-field label {
+        flex: 1 1 calc(20% - 10px);
+        text-align: center;
+    }
+}
+
+/* Add subtle glow effect to inputs on focus */
+input:focus, select:focus {
+    box-shadow: 0 0 10px rgba(72, 202, 228, 0.2);
+}
+
+/* Add these styles to your existing CSS */
+/* Add these styles if not already present */
+.error-message {
+    background-color: #ff44442b;
+    color: #ff4444;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 1px solid #ff4444;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    animation: shake 0.5s ease-in-out;
+}
+
+.error-icon {
+    font-size: 20px;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
